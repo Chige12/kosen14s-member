@@ -1,12 +1,10 @@
-//GitHub Pages
-// `DEPLOY_ENV` が `GH_PAGES` の場合のみ `router.base = '/<repository-name>/'` を追加する
-const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
-  router: {
-    base: '/member/'//repository-name
-  }
-} : {}
-
 module.exports = {
+  router: {
+    base: '/member/'
+  },
+  generate: {
+    dir: "docs"
+  },
   /*
   ** Headers of the page
   */
@@ -19,7 +17,6 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/earlyaccess/notosansjapanese.css'}
     ]
   },
   /*
